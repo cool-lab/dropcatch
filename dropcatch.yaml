@@ -1,0 +1,51 @@
+common:
+  version: 0.0.1
+  debug:   true
+  logpath: "./logs/out.log"
+  loglevel: DEBUG
+
+
+hunter:
+   # true: 守护模式，每天指定时间自动去拉取域名文件，循环直到程序关闭
+   # false: 非守护模式，用于手动拉取某天的域名文件
+   isdaemon: true
+
+   # 守护模式下，每天指定时间去拉取域名文件(24小时制)
+   # 1.不填： 默认中午12点
+   # 2.具体时间： 9(早晨9点)
+   pulltime: 18
+
+   # date只有在非守护模式下才有意义
+   # 非守护模式下有两种Date格式:
+   #   1. 不填： 代表程序运行当日
+   #   2. 具体的日期： 2016-09-21
+   date: ""
+   # 域名文件被解析后输出到的文件夹
+   outpath: "./out"
+
+# 域名过滤规则
+basefilter:
+  # 域名后缀类型
+  suffixtype: ".com"
+
+  # 域名最大长度，不包含.com后缀的长度，例如google.com，这个长度就是6
+  maxlen: 6
+
+  # 域名是否包含 '-'
+  excludedelim: false 
+
+  # 域名的字符类型
+  # 1: 纯字母, eg: qq.com
+  # 2: 纯数字, 176.com
+  # 3: 纯数字或者纯字母均可以, eg: qq.com和176.com都符合条件
+  # 4: 包含了1，2，3，且可以允许数字字母混合的类型，eg: qq.com，176.com,qq123.com都符合条件
+  chartype: 1
+
+
+advfilter:
+  # 出现的字符种类上限，越小代表域名的字符表现越工整、平坦，例如
+  # qq.com : 1
+  # baidu.com: 5
+  # aabb.com: 2
+  # a01.com : 3
+  occurchars: 4
