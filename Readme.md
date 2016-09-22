@@ -14,8 +14,8 @@
 用户须知
 --------------
 目前该产品只支持过期将删除域名的发现，不支持自动注册等，你有两个选择：
-1. 去DropCatch.com上预订你过滤出来的域名
-2. 去DropCatch.com上查询过期时间，等到了那个时间，自行通过godaddy.com或net.cn等域名服务商注册
+ - 去DropCatch.com上预订你过滤出来的域名
+ - 去DropCatch.com上查询过期时间，等到了那个时间，自行通过godaddy.com或net.cn等域名服务商注册
  
 Installation
 ------------
